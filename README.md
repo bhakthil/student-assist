@@ -1,4 +1,4 @@
-# student-assist
+# AskCCI Bot
 This repo contains rasa bot project AskCCI StudentAssist Bot that was developed as part of the course ITIS-6112-8112.
 
 # Project Setup

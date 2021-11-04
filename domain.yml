@@ -8,10 +8,23 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - thank_you
+###################
+  - phd_info
+  - msc_info
+
+entities:
+  - degree
 
 responses:
+  utter_phd_info:
+  - text: "You can get more information about our PhD program at:\n https://spaces.uncc.edu/display/ACCI/For+Current+students"
+
+  utter_msc_info:
+  - text: "You can get more information about our MSc program at:\n https://spaces.uncc.edu/display/ACCI/For+Current+MS+Students"
+
   utter_greet:
-  - text: "Hey! How are you?"
+  - text: "Hey! How are you? What can I help you with?"
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -21,13 +34,25 @@ responses:
   - text: "Did that help you?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Great........!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye, have a nice day!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_helpdesk:
+  - text: "Sorry, I could not understand your question. Please contact our help desk"
+
+  utter_reprompt:
+  - text: "Sorry, I could not understand that. Can you be more specific?"
+
+  utter_continue:
+  - text: "Is there any other questions that I can help you with?"
+  
+  utter_thanks:
+  - text: "Thank you very much for using AskCCI Student Assist"
 
 session_config:
   session_expiration_time: 60

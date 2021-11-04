@@ -45,7 +45,7 @@ responses:
   utter_helpdesk:
   - text: "Sorry, I could not understand your question. Please contact our help desk"
 
-  utter_reprompt:
+  utter_please_rephrase:
   - text: "Sorry, I could not understand that. Can you be more specific?"
 
   utter_continue:

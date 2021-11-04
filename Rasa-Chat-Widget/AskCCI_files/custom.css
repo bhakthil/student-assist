@@ -1,0 +1,10 @@
+
+ .acs-tree-item, .acs-side-bar a, .acs-side-bar td a {  
+    color: #00703c;  
+}  
+
+.acs-side-bar-space-info .avatar-img-container .avatar-img-wrapper img.avatar-img, #image-holder .small-logo-wrapper img {
+   background-color: transparent;
+}
+
+

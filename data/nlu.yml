@@ -90,3 +90,35 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: thank_you
+  examples: |
+    - Thanks
+    - Thank You
+    - thanks
+    - thanks a lot 
+    - thank you so much
+
+- intent: phd_info
+  examples: |
+    - Where can I get more details of the [PhD](degree) Program?
+    - I want [PhD](degree) information
+    - How can I get [PhD](degree) information
+    - [PhD](degree) information
+    - Can you provide me with [PhD](degree) information
+    - [PhD](degree) home page
+    - I want to do a [PhD](degree)
+    - Give me Doctor's program information
+
+- intent: msc_info
+  examples: |
+    - Where can I get more details of the [MSc](degree) Program?
+    - I want [MSc](degree) information
+    - How can I get [MSc](degree) information
+    - [MSc](degree) information
+    - Can you provide me with [MSc](degree) information
+    - [MSc](degree) home page
+    - I want to do a [MSc](degree)
+    - Give me Master's program information
+    - I am intersted in higer studies. where can I get information?
+    - I want to do a master's degree. how can I get more information?

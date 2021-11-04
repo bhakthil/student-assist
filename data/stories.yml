@@ -1,6 +1,63 @@
 version: "2.0"
 
+rules:
+- rule: Say `hello` whenever the user sends a message with intent `greet`
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+# - rule: utter happy msg on affirm
+#   steps:
+#   - intent: affirm
+#   - action: utter_happy
+
 stories:
+
+- story: phd info happy path
+  steps:
+  - intent: phd_info
+  - action: utter_phd_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: phd info unhappy path
+  steps:
+  - intent: phd_info
+  - action: utter_phd_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+- story: msc info happy path
+  steps:
+  - intent: msc_info
+  - action: utter_msc_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: msc info unhappy path
+  steps:
+  - intent: msc_info
+  - action: utter_msc_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+###-----------Chitchat--------------###
 
 - story: happy path
   steps:
@@ -28,3 +85,8 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: thanks path
+  steps:
+  - intent: thank_you
+  - action: utter_thanks

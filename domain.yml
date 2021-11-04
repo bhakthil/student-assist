@@ -18,10 +18,10 @@ entities:
 
 responses:
   utter_phd_info:
-  - text: "You can get more information about our PhD program at:\n https://spaces.uncc.edu/display/ACCI/For+Current+students"
+  - text: "You can get more information about our PhD program at <a href='https://bit.ly/3whwJFL'>Link</a>"
 
   utter_msc_info:
-  - text: "You can get more information about our MSc program at:\n https://spaces.uncc.edu/display/ACCI/For+Current+MS+Students"
+  - text: "You can get more information about our MSc program at <a href='https://bit.ly/3GMPPIV'>Link</a>"
 
   utter_greet:
   - text: "Hey! How are you? What can I help you with?"
@@ -43,7 +43,7 @@ responses:
   - text: "I am a bot, powered by Rasa."
 
   utter_helpdesk:
-  - text: "Sorry, I could not understand your question. Please contact our help desk"
+  - text: "Sorry, I could not understand your question. Please contact our help desk 1-800-1234"
 
   utter_please_rephrase:
   - text: "Sorry, I could not understand that. Can you be more specific?"

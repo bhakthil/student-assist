@@ -37,11 +37,11 @@ If the server is up and running you should be able to see the below message
 
 When you open the **/ccibot/Chatbot-Widget/AskCCI.html** file, you will notice chat icon in the bottom-right corner
 
-![bot icon]('bot-icon.png')
+![bot icon](bot-icon.png)
 
 You may start communicating with the bot by clicking on the on the bot icon.
 
-![chat]('chat-window.png')
+![chat](chat-window.png)
 
 # How to re-train the chat bot
 

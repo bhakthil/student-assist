@@ -83,9 +83,9 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   .
   .
 - story: **YOU_WILL_APPEND_YOUR_STORIES_HERE**
-  steps
+  steps:
   - intent: [new intent]
-  - action: ...
+  - action: [new action]
   - action: ...
 ```
 

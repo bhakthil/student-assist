@@ -25,3 +25,14 @@ NOTE:
 Please follow quick installation step at https://rasa.com/docs/rasa/installation
 
 Do not perform the step that creates a new Rasa project
+
+# How to run the chat bot
+You can start the chatbot server by executing
+
+  `rasa run --model models --enable-api --cors "*"`
+
+If the server is up and running you should be able to see the below message
+
+  `INFO     root  - Rasa server is up and running.`
+
+When you open the ** /ccibot/Chatbot-Widget/AskCCI.html ** file, you will notice chat icon in the bottom-right corner

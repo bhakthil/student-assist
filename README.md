@@ -48,7 +48,7 @@ There are few places that needs to be changed for a new intent to be added to th
 
 Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent. 
 
-  ```
+  ```yml
   - intent: thank_you
     examples: |
     - Thanks
@@ -82,7 +82,11 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   .
   .
   .
-  **YOU_WILL_APPEND_YOUR_STORIES_HERE**
+- story: **YOU_WILL_APPEND_YOUR_STORIES_HERE**
+  steps
+  - intent: [new intent]
+  - action: ...
+  - action: ...
 ```
 
 ### ./data/domain.yml
@@ -104,7 +108,9 @@ responses:
   .
   .
   .
-  **YOU_WILL_APPEND_YOUR_RESPONSE(S)_HERE**
+  utter_<YOUR_NEW_UTTERANCE >:
+  - text: "YOUR NEW RESPONSE"
+  
 ```
 
 In addition, you will add your intent names under the `intents` section of the domain file.

@@ -1,7 +1,7 @@
 # AskCCI Bot
 This repo contains rasa bot project AskCCI StudentAssist Bot that was developed as part of the course ITIS-6112-8112.
 
-Design documentation is available at !['design'](https://docs.google.com/document/d/1saYj5444O-YRcWeuIh9C38ucAxf4pyq5ainBT8tfWe4/edit?usp=sharing)
+Design documentation is available at ['Design Document Link'](https://docs.google.com/document/d/1saYj5444O-YRcWeuIh9C38ucAxf4pyq5ainBT8tfWe4/edit?usp=sharing)
 
 # Project Setup
 - clone this project

@@ -122,3 +122,28 @@ nlu:
     - Give me Master's program information
     - I am intersted in higer studies. where can I get information?
     - I want to do a master's degree. how can I get more information?
+
+
+- intent: phd_admissions
+  examples: |
+    - Where can I get more informations about [PhD](admissions)?
+    - I want [PhD](admissions) information
+    - How can I get [PhD](admissions) information
+    - [PhD](admissions) information
+    - Can you provide me with [PhD](admissions) information
+    - [PhD](admissions) home page
+    - I want to do a [PhD](admissions)
+    - Give me Doctor's program admissions information
+
+- intent: msc_admissions
+  examples: |
+    - Where can I get more details of the [MSc](admissions) Program?
+    - I want [MSc](admissions) information
+    - How can I get [MSc](admissions) information
+    - [MSc](admissions) information
+    - Can you provide me with [MSc](admissions) information
+    - [MSc](admissions) home page
+    - I want to do a [MSc](admissions)
+    - Give me Master's program admisions information
+    - I am intersted in higer studies. What are you looking for in potential students?
+    - I want to do a master's degree. What are the requirements to get accepted?

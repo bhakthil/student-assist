@@ -12,6 +12,8 @@ intents:
 ###################
   - phd_info
   - msc_info
+  - phd_admissions
+  - msc_admissions
 
 entities:
   - degree
@@ -22,6 +24,12 @@ responses:
 
   utter_msc_info:
   - text: "You can get more information about our MSc program at <a href='https://bit.ly/3GMPPIV'>Link</a>"
+
+  utter_phd_admissions:
+  - text: "You can get more information about our PhD admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=44175546'>Link</a>"
+
+  utter_msc_admissions:
+  - text: "You can get more information about our MSc admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=41911379'>Link</a>"
 
   utter_greet:
   - text: "Hey! How are you? What can I help you with?"

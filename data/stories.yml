@@ -57,6 +57,41 @@ stories:
   - intent: deny
   - action: utter_helpdesk  
 
+
+- story: phd admissions happy path
+  steps:
+  - intent: phd_admissions
+  - action: utter_phd_admissions
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: phd admissions unhappy path
+  steps:
+  - intent: phd_admissions
+  - action: utter_phd_admissions
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk 
+
+- story: msc admissions happy path
+  steps:
+  - intent: msc_admissions
+  - action: utter_msc_admissions
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: msc admissions unhappy path
+  steps:
+  - intent: msc_admissions
+  - action: utter_msc_admissions
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk 
+
 ###-----------Chitchat--------------###
 
 - story: happy path

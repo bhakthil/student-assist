@@ -30,6 +30,25 @@ responses:
 
   utter_msc_admissions:
   - text: "You can get more information about our MSc admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=41911379'>Link</a>"
+  
+  utter_grants_info:
+  - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/financial-aid-loans/types-aid/grants'>Link</a>"
+
+  utter_fellowships_internships_info:
+  - text: "You can get more information about clubs/activites at <a href='https://thecollaborative.charlotte.edu/news/internship-and-doctoral-fellows-opportunities'>Link</a>"
+
+  utter_tutionfee_info:
+  - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/billing-payments-refunds/tuition-and-fees/graduate-tuition-fees'>Link</a>"
+
+  utter_clubs/activites_info:
+  - text: "You can get more information about clubs/activites at <a href='https://admissions.charlotte.edu/student-life/clubs-organizations'>Link</a>"
+
+  utter_research_info:
+  - text: "You can get more information about available research information at <a href='https://cci.charlotte.edu/departments/computer-science-cs/cs-research'>Link</a>"
+
+  utter_job_opportunities_info:
+  - text: "You can get more information about job opportunities information at <a href='https://cci.charlotte.edu/about-us/job-opportunities'>Link</a>"
+
 
   utter_greet:
   - text: "Hey! How are you? What can I help you with?"

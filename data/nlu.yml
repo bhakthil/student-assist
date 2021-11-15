@@ -147,3 +147,100 @@ nlu:
     - Give me Master's program admisions information
     - I am intersted in higer studies. What are you looking for in potential students?
     - I want to do a master's degree. What are the requirements to get accepted?
+    
+    - intent: grants_info
+  examples: |
+    - Where can I get more details of the [grants](opportunites) Program?
+    - I want [grants](opportunites) information
+    - How can I get [grants](opportunites) information
+    - [grants](opportunites) information
+    - Can you provide me with [grants](opportunites) information
+    - [grants](opportunites) home page
+    - I want to do a [grants](opportunites)
+    - Give me information abouts grants
+
+- intent: fellowships_internships_info
+  examples: |
+    - Where can I get more details of the [fellowships](opportunites) Program?
+    - Where can I get more details of the [internships](opportunites) Program?
+    - I want [internships](opportunites) information
+    - I want [fellowships and internships](opportunites) information
+    - I want [fellowships](opportunites) information
+    - How can I get [fellowships and internships](opportunites) information
+    - How can I get [internships](opportunites) information
+    - How can I get [internships](opportunites) information
+    - [fellowships internship opportunities](opportunites) information
+    - [fellowships opportunities](opportunites) information
+    - [internship opportunities](opportunites) information
+    - Can you provide me with [fellowships/internships](opportunites) information
+    - Can you provide me with [fellowships](opportunites) information
+    - Can you provide me with [internships](opportunites) information
+    - [fellowships and internships](opportunites) home page
+    - [fellowships](opportunites) home page
+    - [internships](opportunites) home page
+    - I want to do a [fellowships and internships](opportunites)
+    - I want to do a [fellowships](opportunites)
+    - I want to do a [internships](opportunites)
+    - Give me fellowships information
+
+- intent: tutionfee_info
+  examples:
+    - Where can I get more details of the [tutionfee](information)?
+    - I want [tutionfee](information) information
+    - How can I get [tutionfee](information) information
+    - [tutionfee](information) information
+    - Can you provide me with [tutionfee] (information) information
+    - [tutionfee](information) home page
+    - I want to do a [tutionfee](information)
+    - Give me tutionfee information
+
+  - intent: clubs/activities_info
+  examples:
+    - Where can I get more details of the [clubs/activies](information)?
+    - Where can I get more details of the [activies](information)?
+    - Where can I get more details of the [clubs](information)?
+    - I want [clubs/activies](information) information
+    - I want [clubs](information) information
+    - I want [activies](information) information
+    - How can I get [clubs/activies](information) information
+    - How can I get [activies](information) information
+    - How can I get [clubs](information) information
+    - [clubs/activies](information) information
+    - [clubs](information) information
+    - [activies](information) information
+    - Can you provide me with [clubs/activies](information) information
+    - Can you provide me with [clubs](information) information
+    - Can you provide me with [activies](information) information
+    - [clubs/activies](information) home page
+    - [clubs](information) home page
+    - [activies](information) home page
+    - I want to get more information about a [clubs/activies](information)
+    - I want to get more information about a [clubs](information)
+    - I want to get more information about a [activies](information)
+    - Give me clubs/activies information
+    - Give me activies information
+    - Give me clubs information
+
+- intent: research_info
+  examples: |
+    - Where can I get more details of the [research](opportunities) ?
+    - I want [research](opportunities) information
+    - How can I get [research](opportunities) information
+    - [research](opportunities) information
+    - Can you provide me with [research](opportunities) information
+    - [research](opportunities) home page
+    - I want to do a [research](opportunities)
+    - Give me available research information
+
+- intent: job_opportunities_info
+  examples: |
+    - Where can I get more details of the [job](opportunities) Program?
+    - I want [job](opportunities) information
+    - How can I get [job](opportunities) information
+    - [job](opportunities) information
+    - Can you provide me with [job](opportunities) information
+    - [job](opportunities) home page
+    - I want to do a [job](opportunities)
+    - Give me job opportunities information
+    - I am intersted in job opportunities. where can I get information?
+    - I want to do a master's degree. how can I get more information?

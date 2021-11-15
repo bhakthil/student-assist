@@ -91,7 +91,108 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_helpdesk 
+ - story: grants info happy path
+  steps:
+  - intent: grants_info
+  - action: utter_grants_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
 
+- story: grants info unhappy path
+  steps:
+  - intent: grants_info
+  - action: utter_grants_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+- story: fellowships_interships info happy path
+  steps:
+  - intent: fellowships_internships_info
+  - action: utter_fellowships_internships_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: fellowships_internships info unhappy path
+  steps:
+  - intent: fellowships_internships_info
+  - action: utter_fellowships_internships_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+  - story: tutionfees info happy path
+  steps:
+  - intent: tutionfee_info
+  - action: utter_tutionfee_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: tutionfee info unhappy path
+  steps:
+  - intent: tutionfee_info
+  - action: utter_tutionfee_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+- story: clubs/activies info happy path
+  steps:
+  - intent: clubs/activites_info
+  - action: utter_clubs/activites_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: clubs/activites info unhappy path
+  steps:
+  - intent: clubs/activites_info
+  - action: utter_clubs/activites_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+  - story: research info happy path
+  steps:
+  - intent: research_info
+  - action: utter_research_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: research info unhappy path
+  steps:
+  - intent: research_info
+  - action: utter_research_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk  
+
+- story: job_opportunities info happy path
+  steps:
+  - intent: job_opportunities_info
+  - action: utter_job_opportunities_info
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: job_opportunities info unhappy path
+  steps:
+  - intent: job_opportunities_info
+  - action: utter_job_opportunities_info
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk
+  
 ###-----------Chitchat--------------###
 
 - story: happy path

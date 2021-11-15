@@ -1,0 +1,221 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: thank_you
+  examples: |
+    - Thanks
+    - Thank You
+    - thanks
+    - thanks a lot 
+    - thank you so much
+
+- intent: phd_info
+  examples: |
+    - Where can I get more details of the [PhD](degree) Program?
+    - I want [PhD](degree) information
+    - How can I get [PhD](degree) information
+    - [PhD](degree) information
+    - Can you provide me with [PhD](degree) information
+    - [PhD](degree) home page
+    - I want to do a [PhD](degree)
+    - Give me Doctor's program information
+
+- intent: msc_info
+  examples: |
+    - Where can I get more details of the [MSc](degree) Program?
+    - I want [MSc](degree) information
+    - How can I get [MSc](degree) information
+    - [MSc](degree) information
+    - Can you provide me with [MSc](degree) information
+    - [MSc](degree) home page
+    - I want to do a [MSc](degree)
+    - Give me Master's program information
+    - I am intersted in higer studies. where can I get information?
+    - I want to do a master's degree. how can I get more information?
+
+- intent: grants_info
+  examples: |
+    - Where can I get more details of the [grants](opportunites) Program?
+    - I want [grants](opportunites) information
+    - How can I get [grants](opportunites) information
+    - [grants](opportunites) information
+    - Can you provide me with [grants](opportunites) information
+    - [grants](opportunites) home page
+    - I want to do a [grants](opportunites)
+    - Give me information abouts grants
+
+- intent: fellowships_internships_info
+  examples: |
+    - Where can I get more details of the [fellowships](opportunites) Program?
+    - Where can I get more details of the [internships](opportunites) Program?
+    - I want [internships](opportunites) information
+    - I want [fellowships and internships](opportunites) information
+    - I want [fellowships](opportunites) information
+    - How can I get [fellowships and internships](opportunites) information
+    - How can I get [internships](opportunites) information
+    - How can I get [internships](opportunites) information
+    - [fellowships internship opportunities](opportunites) information
+    - [fellowships opportunities](opportunites) information
+    - [internship opportunities](opportunites) information
+    - Can you provide me with [fellowships/internships](opportunites) information
+    - Can you provide me with [fellowships](opportunites) information
+    - Can you provide me with [internships](opportunites) information
+    - [fellowships and internships](opportunites) home page
+    - [fellowships](opportunites) home page
+    - [internships](opportunites) home page
+    - I want to do a [fellowships and internships](opportunites)
+    - I want to do a [fellowships](opportunites)
+    - I want to do a [internships](opportunites)
+    - Give me fellowships information
+
+- intent: tutionfee_info
+  examples:
+    - Where can I get more details of the [tutionfee](information)?
+    - I want [tutionfee](information) information
+    - How can I get [tutionfee](information) information
+    - [tutionfee](information) information
+    - Can you provide me with [tutionfee] (information) information
+    - [tutionfee](information) home page
+    - I want to do a [tutionfee](information)
+    - Give me tutionfee information
+
+  - intent: clubs/activities_info
+  examples:
+    - Where can I get more details of the [clubs/activies](information)?
+    - Where can I get more details of the [activies](information)?
+    - Where can I get more details of the [clubs](information)?
+    - I want [clubs/activies](information) information
+    - I want [clubs](information) information
+    - I want [activies](information) information
+    - How can I get [clubs/activies](information) information
+    - How can I get [activies](information) information
+    - How can I get [clubs](information) information
+    - [clubs/activies](information) information
+    - [clubs](information) information
+    - [activies](information) information
+    - Can you provide me with [clubs/activies](information) information
+    - Can you provide me with [clubs](information) information
+    - Can you provide me with [activies](information) information
+    - [clubs/activies](information) home page
+    - [clubs](information) home page
+    - [activies](information) home page
+    - I want to get more information about a [clubs/activies](information)
+    - I want to get more information about a [clubs](information)
+    - I want to get more information about a [activies](information)
+    - Give me clubs/activies information
+    - Give me activies information
+    - Give me clubs information
+
+- intent: research_info
+  examples: |
+    - Where can I get more details of the [research](opportunities) ?
+    - I want [research](opportunities) information
+    - How can I get [research](opportunities) information
+    - [research](opportunities) information
+    - Can you provide me with [research](opportunities) information
+    - [research](opportunities) home page
+    - I want to do a [research](opportunities)
+    - Give me available research information
+
+- intent: job_opportunities_info
+  examples: |
+    - Where can I get more details of the [job](opportunities) Program?
+    - I want [job](opportunities) information
+    - How can I get [job](opportunities) information
+    - [job](opportunities) information
+    - Can you provide me with [job](opportunities) information
+    - [job](opportunities) home page
+    - I want to do a [job](opportunities)
+    - Give me job opportunities information
+    - I am intersted in job opportunities. where can I get information?
+    - I want to do a master's degree. how can I get more information?

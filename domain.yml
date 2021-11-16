@@ -1,0 +1,78 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thank_you
+###################
+  - phd_info
+  - msc_info
+
+entities:
+  - degree
+
+responses:
+  utter_phd_info:
+  - text: "You can get more information about our PhD program at <a href='https://bit.ly/3whwJFL'>Link</a>"
+
+  utter_msc_info:
+  - text: "You can get more information about our MSc program at <a href='https://bit.ly/3GMPPIV'>Link</a>"
+
+  utter_greet:
+  - text: "Hey! How are you? What can I help you with?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_grants_info:
+  - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/financial-aid-loans/types-aid/grants'>Link</a>"
+
+  utter_fellowships_internships_info:
+  - text: "You can get more information about clubs/activites at <a href='https://thecollaborative.charlotte.edu/news/internship-and-doctoral-fellows-opportunities'>Link</a>"
+
+
+  utter_tutionfee_info:
+  - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/billing-payments-refunds/tuition-and-fees/graduate-tuition-fees'>Link</a>"
+
+  utter_clubs/activites_info:
+  - text: "You can get more information about clubs/activites at <a href='https://admissions.charlotte.edu/student-life/clubs-organizations'>Link</a>"
+
+  utter_research_info:
+  - text: "You can get more information about available research information at <a href='https://cci.charlotte.edu/departments/computer-science-cs/cs-research'>Link</a>"
+
+  utter_job_opportunities_info:
+  - text: "You can get more information about job opportunities information at <a href='https://cci.charlotte.edu/about-us/job-opportunities'>Link</a>"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great........!"
+
+  utter_goodbye:
+  - text: "Bye, have a nice day!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_helpdesk:
+  - text: "Sorry, I could not understand your question. Please contact our help desk 1-800-1234"
+
+  utter_please_rephrase:
+  - text: "Sorry, I could not understand that. Can you be more specific?"
+
+  utter_continue:
+  - text: "Is there any other questions that I can help you with?"
+  
+  utter_thanks:
+  - text: "Thank you very much for using AskCCI Student Assist"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

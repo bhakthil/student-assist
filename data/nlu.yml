@@ -234,13 +234,13 @@ nlu:
 
 - intent: job_opportunities_info
   examples: |
-    - Where can I get more details of the [job](opportunities) Program?
+    - Where can I get more details of the [job](opportunities) ?
     - I want [job](opportunities) information
     - How can I get [job](opportunities) information
     - [job](opportunities) information
     - Can you provide me with [job](opportunities) information
     - [job](opportunities) home page
-    - I want to do a [job](opportunities)
-    - Give me job opportunities information
-    - I am intersted in job opportunities. where can I get information?
-    - I want to do a master's degree. how can I get more information?
+    - I want information regarding [job](opportunities)
+    - Give me [job](opportunities) information
+    - I am intersted in [job](opportunities). where can I get information?
+    - I want to search for [job](opportunities). how can I get more information?

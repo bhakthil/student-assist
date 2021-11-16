@@ -234,7 +234,7 @@ nlu:
 
 - intent: job_opportunities_info
   examples: |
-    - Where can I get more details of the [job](opportunities) Program?
+    - Where can I get more details of the [job](opportunities) ?
     - I want [job](opportunities) information
     - How can I get [job](opportunities) information
     - [job](opportunities) information

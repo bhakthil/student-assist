@@ -12,9 +12,19 @@ intents:
 ###################
   - phd_info
   - msc_info
+  - phd_admissions
+  - msc_admissions
+  - grants_info
+  - fellowships_internships_info
+  - tutionfee_info
+  - clubs_activities_info
+  - research_info
+  - job_opportunities_info
 
 entities:
   - degree
+  - opportunities
+  - information
 
 responses:
   utter_phd_info:
@@ -22,6 +32,12 @@ responses:
 
   utter_msc_info:
   - text: "You can get more information about our MSc program at <a href='https://bit.ly/3GMPPIV'>Link</a>"
+
+  utter_phd_admissions:
+  - text: "You can get more information about our PhD admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=44175546'>Link</a>"
+
+  utter_msc_admissions:
+  - text: "You can get more information about our MSc admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=41911379'>Link</a>"
 
   utter_greet:
   - text: "Hey! How are you? What can I help you with?"
@@ -34,13 +50,12 @@ responses:
   - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/financial-aid-loans/types-aid/grants'>Link</a>"
 
   utter_fellowships_internships_info:
-  - text: "You can get more information about clubs/activites at <a href='https://thecollaborative.charlotte.edu/news/internship-and-doctoral-fellows-opportunities'>Link</a>"
-
+  - text: "You can get more information about fellowships,internships and scholarships at <a href='https://thecollaborative.charlotte.edu/news/internship-and-doctoral-fellows-opportunities'>Link</a>"
 
   utter_tutionfee_info:
   - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/billing-payments-refunds/tuition-and-fees/graduate-tuition-fees'>Link</a>"
 
-  utter_clubs/activites_info:
+  utter_clubs_activities_info:
   - text: "You can get more information about clubs/activites at <a href='https://admissions.charlotte.edu/student-life/clubs-organizations'>Link</a>"
 
   utter_research_info:

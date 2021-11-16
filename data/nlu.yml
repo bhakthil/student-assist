@@ -126,29 +126,29 @@ nlu:
 
 - intent: phd_admissions
   examples: |
-    - Where can I get more informations about [PhD](admissions)?
-    - I want [PhD](admissions) information
-    - How can I get [PhD](admissions) information
-    - [PhD](admissions) information
-    - Can you provide me with [PhD](admissions) information
-    - [PhD](admissions) home page
-    - I want to do a [PhD](admissions)
+    - Where can I get more informations about [PhD](degree)?
+    - I want [PhD](degree) information
+    - How can I get [PhD](degree) information
+    - [PhD](degree) information
+    - Can you provide me with [PhD](degree) information
+    - [PhD](degree) home page
+    - I want to do a [PhD](degree)
     - Give me Doctor's program admissions information
 
 - intent: msc_admissions
   examples: |
-    - Where can I get more details of the [MSc](admissions) Program?
-    - I want [MSc](admissions) information
-    - How can I get [MSc](admissions) information
-    - [MSc](admissions) information
-    - Can you provide me with [MSc](admissions) information
-    - [MSc](admissions) home page
-    - I want to do a [MSc](admissions)
+    - Where can I get more details of the [MSc](degree) Program?
+    - I want [MSc](degree) information
+    - How can I get [MSc](degree) information
+    - [MSc](degree) information
+    - Can you provide me with [MSc](degree) information
+    - [MSc](degree) home page
+    - I want to do a [MSc](degree)
     - Give me Master's program admisions information
     - I am intersted in higer studies. What are you looking for in potential students?
     - I want to do a master's degree. What are the requirements to get accepted?
     
-    - intent: grants_info
+- intent: grants_info
   examples: |
     - Where can I get more details of the [grants](opportunites) Program?
     - I want [grants](opportunites) information
@@ -184,7 +184,7 @@ nlu:
     - Give me fellowships information
 
 - intent: tutionfee_info
-  examples:
+  examples: |
     - Where can I get more details of the [tutionfee](information)?
     - I want [tutionfee](information) information
     - How can I get [tutionfee](information) information
@@ -194,8 +194,8 @@ nlu:
     - I want to do a [tutionfee](information)
     - Give me tutionfee information
 
-  - intent: clubs/activities_info
-  examples:
+- intent: clubs_activities_info
+  examples: |
     - Where can I get more details of the [clubs/activies](information)?
     - Where can I get more details of the [activies](information)?
     - Where can I get more details of the [clubs](information)?

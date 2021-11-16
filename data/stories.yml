@@ -1,26 +1,5 @@
 version: "2.0"
 
-rules:
-- rule: Say `hello` whenever the user sends a message with intent `greet`
-  steps:
-  - intent: greet
-  - action: utter_greet
-
-- rule: Say goodbye anytime the user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
-
-- rule: Say 'I am a bot' anytime the user challenges
-  steps:
-  - intent: bot_challenge
-  - action: utter_iamabot
-
-# - rule: utter happy msg on affirm
-#   steps:
-#   - intent: affirm
-#   - action: utter_happy
-
 stories:
 
 - story: phd info happy path
@@ -90,8 +69,9 @@ stories:
   - action: utter_msc_admissions
   - action: utter_did_that_help
   - intent: deny
-  - action: utter_helpdesk 
- - story: grants info happy path
+  - action: utter_helpdesk
+
+- story: grants info happy path
   steps:
   - intent: grants_info
   - action: utter_grants_info
@@ -125,7 +105,7 @@ stories:
   - intent: deny
   - action: utter_helpdesk  
 
-  - story: tutionfees info happy path
+- story: tutionfees info happy path
   steps:
   - intent: tutionfee_info
   - action: utter_tutionfee_info
@@ -142,24 +122,24 @@ stories:
   - intent: deny
   - action: utter_helpdesk  
 
-- story: clubs/activies info happy path
+- story: clubs activies info happy path
   steps:
-  - intent: clubs/activites_info
-  - action: utter_clubs/activites_info
+  - intent: clubs_activities_info
+  - action: utter_clubs_activities_info
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
   - action: utter_continue
 
-- story: clubs/activites info unhappy path
+- story: clubs activites info unhappy path
   steps:
-  - intent: clubs/activites_info
-  - action: utter_clubs/activites_info
+  - intent: clubs_activities_info
+  - action: utter_clubs_activities_info
   - action: utter_did_that_help
   - intent: deny
   - action: utter_helpdesk  
 
-  - story: research info happy path
+- story: research info happy path
   steps:
   - intent: research_info
   - action: utter_research_info

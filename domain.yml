@@ -28,10 +28,14 @@ entities:
 
 responses:
   utter_phd_info:
-  - text: "You can get more information about our PhD program at <a href='https://bit.ly/3whwJFL'>Link</a>"
+  - text: "You can get more information about our [PhD program](https://bit.ly/3whwJFL)"
+    channel: "slack"
+  - text: "You can get more information about our <a href='https://bit.ly/3whwJFL'>PhD program</a>"
 
   utter_msc_info:
-  - text: "You can get more information about our MSc program at <a href='https://bit.ly/3GMPPIV'>Link</a>"
+  - text: "You can get more information about our [MSc program](https://bit.ly/3GMPPIV)"
+    channel: "slack"
+  - text: "You can get more information about our <a href='https://bit.ly/3GMPPIV'>MSc program</a>"
 
   utter_phd_admissions:
   - text: "You can get more information about our PhD admissions at <a href='https://spaces.uncc.edu/pages/viewpage.action?pageId=44175546'>Link</a>"
@@ -47,7 +51,7 @@ responses:
     image: "https://i.imgur.com/nGF1K8f.jpg"
 
   utter_grants_info:
-  - text: "You can get more information about tution fee at <a href='https://ninercentral.charlotte.edu/financial-aid-loans/types-aid/grants'>Link</a>"
+  - text: "You can get more information about grants at <a href='https://ninercentral.charlotte.edu/financial-aid-loans/types-aid/grants'>Link</a>"
 
   utter_fellowships_internships_info:
   - text: "You can get more information about fellowships,internships and scholarships at <a href='https://thecollaborative.charlotte.edu/news/internship-and-doctoral-fellows-opportunities'>Link</a>"
@@ -71,7 +75,7 @@ responses:
   - text: "Great........!"
 
   utter_goodbye:
-  - text: "Bye, have a nice day!"
+  - text: "It was my pleassure to answer your questions. Please contact our help desk 1-800-1234 if you have further questions. Bye, have a nice day!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."

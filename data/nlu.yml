@@ -9,12 +9,10 @@ nlu:
     - hello there
     - good morning
     - good evening
-    - moin
+    - morning
     - hey there
     - let's go
     - hey dude
-    - goodmorning
-    - goodevening
     - good afternoon
 
 - intent: goodbye
@@ -237,3 +235,20 @@ nlu:
     - how can start working
     - start working
     - get paid while studying
+
+
+- intent: helpdesk
+  examples: |
+    - Agent
+    - Human
+    - Can i talk to a human
+    - human please
+    - you are not helpful
+    - not helpful
+    - i am confused
+
+- intent: info_retrieval
+  examples: |
+
+- intent: deny_info_retrieval
+  examples: |

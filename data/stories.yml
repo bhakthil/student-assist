@@ -172,7 +172,24 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_helpdesk
-  
+
+- story: call haystack happy path
+  steps:
+  - intent: info_retrieval
+  - action: action_info_retrieval
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: call haystack unhappy path
+  steps:
+  - intent: info_retrieval
+  - action: action_info_retrieval
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk
+
 ###-----------Chitchat--------------###
 
 - story: happy path
@@ -206,3 +223,4 @@ stories:
   steps:
   - intent: thank_you
   - action: utter_thanks
+

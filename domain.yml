@@ -20,6 +20,9 @@ intents:
   - clubs_activities_info
   - research_info
   - job_opportunities_info
+  - info_retrieval
+  - deny_info_retrieval
+  - helpdesk
 
 entities:
   - degree
@@ -70,6 +73,12 @@ responses:
 
   utter_did_that_help:
   - text: "Did that help you?"
+    buttons:
+    - payload: /affirm
+      title: Yes 👍
+    - payload: /deny
+      title: No 👎
+
 
   utter_happy:
   - text: "Great........!"
@@ -83,7 +92,7 @@ responses:
   utter_helpdesk:
   - text: "Sorry, I could not understand your question. Please contact our help desk 1-800-1234"
 
-  utter_please_rephrase:
+  utter_ask_rephrase:
   - text: "Sorry, I could not understand that. Can you be more specific?"
 
   utter_continue:
@@ -92,6 +101,13 @@ responses:
   utter_thanks:
   - text: "Thank you very much for using AskCCI Student Assist"
 
+  utter_info_retrieval:
+  - text: "Calling haystack........." 
+
+actions:
+  - action_default_ask_affirmation
+  - action_info_retrieval
+  
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true

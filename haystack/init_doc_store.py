@@ -1,3 +1,5 @@
+#!./.venv/bin/python
+
 import pandas as pd
 
 from haystack.document_stores import ElasticsearchDocumentStore
@@ -27,7 +29,7 @@ retriever = EmbeddingRetriever(
 )
 
 # Get dataframe with columns "question", "answer" and some custom metadata
-df = pd.read_csv("faq.csv")
+df = pd.read_csv("haystack/faq.csv")
 
 # Get embeddings for our questions from the FAQs
 questions = list(df["question"].values)

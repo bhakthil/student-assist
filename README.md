@@ -1,5 +1,20 @@
 # Ask-CCI Bot
 
+This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was originally developed as part of the course ITIS-6112-8112 and has been further expanded for course DSBA-6345.
+
+## Table of Contents
+
+- Project Setup
+- Installaing Dependencies
+- How to Run The Chatbot
+- How to Train the Chatbot
+  - NLU
+  - Stories
+  - Domain
+- How to Create a Trained Model
+- Running Haystack Service
+- Running API Tests
+
 ## Project Setup
 
 1. Clone this project to your local system via:
@@ -59,24 +74,47 @@
 3. Install additional requirements using pip:
 
     ```bash
-    python3 -m pip install uvicorn, fastapi, pytest
+    python3 -m pip install uvicorn, fastapi, pytest, emoji
     ```
 
 **NOTE**: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
 
 ---
 
-## How to run the chat bot
+## How to Run The Chatbot
 
-You can start the chatbot server by executing
+1. First, you must start the Rasa action server:
+  
+   ```bash
+   rasa run actions
+   ```
 
-  `rasa run --model models --enable-api --cors "*"`
+   - If the action server is running, you should be able to see the below message:
 
-If the server is up and running you should be able to see the below message
+        ```bash
+      (.venv) ➜  student-assist git:(dev) ✗ rasa run actions
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_info_retrieval'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_default_ask_affirmation'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
+      ```
 
-  `INFO     root  - Rasa server is up and running.`
+2. In a separate terminal, you can start the chatbot server by executing:
+  
+    ```bash
+    rasa run -m models --enable-api --cors "*"
+    ```
 
-When you open the **/ccibot/Chatbot-Widget/AskCCI.html** file, you will notice chat icon in the bottom-right corner
+   - If the server is up and running, you should be able to see the below message:
+
+     ```bash
+     (.venv) ➜  student-assist git:(dev) ✗ rasa run -m models --enable-api --cors "*"
+     2022-03-09 14:34:53 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+     2022-03-09 14:34:54 INFO     rasa.core.processor  - Loading model models/20220309-143217-broad-valid.tar.gz...
+     2022-03-09 14:35:31 INFO     root  - Rasa server is up and running.
+     ```
+
+When you open the [AskCCI.html](https://github.com/bhakthil/student-assist/blob/main/Chatbot-Widget/AskCCI.html) file, you will notice chat icon in the bottom-right corner
 
 ![bot icon](bot-icon.png)
 
@@ -84,14 +122,15 @@ You may start communicating with the bot by clicking on the on the bot icon.
 
 ![chat](chat-window.png)
 
-# How to re-train the chat bot
+---
+
+## How to Train The Chatbot
 
 In order for the bot to understand different intents, it needs to be trained with sample utterances for each new intent.
 
-## Modifying training files
 There are few places that needs to be changed for a new intent to be added to the system.
 
-### ./data/nlu.yml
+## ./data/nlu.yml
 
 Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent.
 
@@ -105,7 +144,7 @@ Please add at least ten sample utterances for each of the intent you are respons
     - thank you so much
   ```
 
-### ./data/stories.yml
+## ./data/stories.yml
 
 Each intent should have at least 2 paths; **happy path** **and unhappy path**. So, please use below example to create paths for your intents.
 
@@ -136,7 +175,7 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   - action: ...
 ```
 
-### ./data/domain.yml
+## ./data/domain.yml
 
 Domain file is where you define the responses for each intent. You will add responses for each of your intent under `responses` section.
 
@@ -178,9 +217,38 @@ intents:
   - **YOU_WILL_APPEND_YOUR_INTENT(S)**
 ```
 
-## How to train the bot
+## How to Create a Trained Model
 
 Once you finish adding the intents and the strories, you will be able to integrate the new additions/edits to your bot by re-training the bot.
-Use below command to re-train the model;
 
-`rasa train`
+Use below command to re-train the model:
+
+```bash
+rasa train
+```
+
+---
+
+## Running Haystack Service
+
+1. Execute the `run.sh` script to create elasticsearch document store and initialize question-answer service (requires docker)
+
+    ```bash
+    bash ./run.sh
+    ```
+
+    This will create a new docker container called `elasticsearch` where all of the documents that can be queried will be stored. If this docker container ever stops you can either restart it from within docker dashboard or delete and recreate the container.
+
+    This script also launches the REST API used for querying the Haystack service.
+
+2. To access the Haystack API documentation, go to `http://127.0.0.1:8000/docs` in your browser. You should see the below image:
+
+    ![Haystack api swagger documentation](haystack-api.png)
+
+## Running API Tests
+
+- To test that the API is functioning properly run the following:
+
+    ```bash
+    pytest api_tests/tests.py
+    ```

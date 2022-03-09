@@ -42,6 +42,7 @@ docker==5.0.3
 docopt==0.6.2
 elastic-apm==6.8.0
 elasticsearch==7.10.0
+emoji==1.7.0
 entrypoints==0.4
 -e git+https://github.com/deepset-ai/haystack.git@a5501c72cf717396cd1b5238bddcc6ce00cba490#egg=farm_haystack
 fastapi==0.75.0

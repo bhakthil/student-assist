@@ -62,13 +62,12 @@
     python3 -m pip install uvicorn, fastapi, pytest
     ```
 
-NOTE:
+NOTE: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
 
-Please follow quick installation step at https://rasa.com/docs/rasa/installation
+---
 
-Do not perform the step that creates a new Rasa project
+## How to run the chat bot
 
-# How to run the chat bot
 You can start the chatbot server by executing
 
   `rasa run --model models --enable-api --cors "*"`

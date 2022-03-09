@@ -4,16 +4,16 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
 
 ## Table of Contents
 
-- Project Setup
-- Installaing Dependencies
-- How to Run The Chatbot
-- How to Train the Chatbot
-  - NLU
-  - Stories
-  - Domain
-- How to Create a Trained Model
-- Running Haystack Service
-- Running API Tests
+- [Project Setup](https://github.com/kmcleste/student-assist/tree/dev#project-setup)
+- [Installaing Dependencies](https://github.com/kmcleste/student-assist/tree/dev#installing-dependencies)
+- [How to Run The Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-run-the-chatbot)
+- [How to Train the Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-train-the-chatbot)
+  - [NLU](https://github.com/kmcleste/student-assist/tree/dev#datanluyml)
+  - [Stories](https://github.com/kmcleste/student-assist/tree/dev#datastoriesyml)
+  - [Domain](https://github.com/kmcleste/student-assist/tree/dev#datadomainyml)
+- [How to Create a Trained Model](https://github.com/kmcleste/student-assist/tree/dev#how-to-create-a-trained-model)
+- [Running Haystack Service](https://github.com/kmcleste/student-assist/tree/dev#running-haystack-service)
+- [Running API Tests](https://github.com/kmcleste/student-assist/tree/dev#running-api-tests)
 
 ## Project Setup
 

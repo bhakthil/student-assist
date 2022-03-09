@@ -1,43 +1,120 @@
-# AskCCI Bot
-This repo contains rasa bot project AskCCI StudentAssist Bot that was developed as part of the course ITIS-6112-8112.
+# Ask-CCI Bot
 
-Design documentation is available at ['Design Document Link'](https://docs.google.com/document/d/1saYj5444O-YRcWeuIh9C38ucAxf4pyq5ainBT8tfWe4/edit?usp=sharing)
+This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was originally developed as part of the course ITIS-6112-8112 and has been further expanded for course DSBA-6345.
 
-# Project Setup
-- clone this project
-- change the directory to student-assist
+## Table of Contents
 
+- [Project Setup](https://github.com/kmcleste/student-assist/tree/dev#project-setup)
+- [Installaing Dependencies](https://github.com/kmcleste/student-assist/tree/dev#installing-dependencies)
+- [How to Run The Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-run-the-chatbot)
+- [How to Train the Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-train-the-chatbot)
+  - [NLU](https://github.com/kmcleste/student-assist/tree/dev#datanluyml)
+  - [Stories](https://github.com/kmcleste/student-assist/tree/dev#datastoriesyml)
+  - [Domain](https://github.com/kmcleste/student-assist/tree/dev#datadomainyml)
+- [How to Create a Trained Model](https://github.com/kmcleste/student-assist/tree/dev#how-to-create-a-trained-model)
+- [Running Haystack Service](https://github.com/kmcleste/student-assist/tree/dev#running-haystack-service)
+- [Running API Tests](https://github.com/kmcleste/student-assist/tree/dev#running-api-tests)
 
-- Create a new virtual environment by choosing a Python interpreter and making a ./venv directory to hold it:
+## Project Setup
+
+1. Clone this project to your local system via:
+
+    ```bash
+    git clone https://github.com/bhakthil/student-assist.git
+    ```
+
+2. Change to the new directory:
+
+    ```bash
+    cd student-assist
+    ```
+
+3. Create a new virtual environment:
+
+    ```bash
+    python3 -m venv ./venv
+    ```
+
+4. Activate the virtual environment
+
+    ```bash
+    source ./venv/bin/activate
+    ```
+
+## Installing Dependencies
+
+1. Install Rasa Open Source using pip (requires Python 3.6 or higher)
+
+    ```bash
+    python3 -m pip install -U --user pip
+
+    python3 -m pip install rasa
+    ```
+
+2. Install Haystack from source
+   1. Change to the root directory where you store projects, make sure this is not **inside** of a project folder
+   2. Clone the [Haystack repo](https://github.com/deepset-ai/haystack)
+
+      ```bash
+      git clone https://github.com/deepset-ai/haystack.git
+      ```
+
+   3. Change to the new directory
+
+      ```bash
+      cd haystack
+      ```
+
+   4. Install `haystack` using pip:
+
+      ```bash
+      python3 -m pip install -e .
+      ```
+
+3. Install additional requirements using pip:
+
+    ```bash
+    python3 -m pip install uvicorn, fastapi, pytest, emoji
+    ```
+
+**NOTE**: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
+
+---
+
+## How to Run The Chatbot
+
+1. First, you must start the Rasa action server:
   
-  `python3 -m venv ./venv`
+   ```bash
+   rasa run actions
+   ```
 
-- Activate the virtual environment:
+   - If the action server is running, you should be able to see the below message:
+
+        ```bash
+      (.venv) ➜  student-assist git:(dev) ✗ rasa run actions
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_info_retrieval'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_default_ask_affirmation'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
+      ```
+
+2. In a separate terminal, you can start the chatbot server by executing:
   
-  `source ./venv/bin/activate`
+    ```bash
+    rasa run -m models --enable-api --cors "*"
+    ```
 
-- Install Rasa Open Source using pip (requires Python 3.6, 3.7, or 3.8).
-  
-  `pip3 install -U --user pip`
-  
-  `pip3 install rasa`
+   - If the server is up and running, you should be able to see the below message:
 
-NOTE:
+     ```bash
+     (.venv) ➜  student-assist git:(dev) ✗ rasa run -m models --enable-api --cors "*"
+     2022-03-09 14:34:53 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+     2022-03-09 14:34:54 INFO     rasa.core.processor  - Loading model models/20220309-143217-broad-valid.tar.gz...
+     2022-03-09 14:35:31 INFO     root  - Rasa server is up and running.
+     ```
 
-Please follow quick installation step at https://rasa.com/docs/rasa/installation
-
-Do not perform the step that creates a new Rasa project
-
-# How to run the chat bot
-You can start the chatbot server by executing
-
-  `rasa run --model models --enable-api --cors "*"`
-
-If the server is up and running you should be able to see the below message
-
-  `INFO     root  - Rasa server is up and running.`
-
-When you open the **/ccibot/Chatbot-Widget/AskCCI.html** file, you will notice chat icon in the bottom-right corner
+When you open the [AskCCI.html](https://github.com/bhakthil/student-assist/blob/main/Chatbot-Widget/AskCCI.html) file, you will notice chat icon in the bottom-right corner
 
 ![bot icon](bot-icon.png)
 
@@ -45,16 +122,17 @@ You may start communicating with the bot by clicking on the on the bot icon.
 
 ![chat](chat-window.png)
 
-# How to re-train the chat bot
+---
+
+## How to Train The Chatbot
 
 In order for the bot to understand different intents, it needs to be trained with sample utterances for each new intent.
 
-## Modifying training files
 There are few places that needs to be changed for a new intent to be added to the system.
 
-### ./data/nlu.yml
+## ./data/nlu.yml
 
-Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent. 
+Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent.
 
   ```yml
   - intent: thank_you
@@ -62,11 +140,11 @@ Please add at least ten sample utterances for each of the intent you are respons
     - Thanks
     - Thank You
     - thanks
-    - thanks a lot 
+    - thanks a lot
     - thank you so much
   ```
 
-### ./data/stories.yml
+## ./data/stories.yml
 
 Each intent should have at least 2 paths; **happy path** **and unhappy path**. So, please use below example to create paths for your intents.
 
@@ -97,7 +175,7 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   - action: ...
 ```
 
-### ./data/domain.yml
+## ./data/domain.yml
 
 Domain file is where you define the responses for each intent. You will add responses for each of your intent under `responses` section.
 
@@ -118,7 +196,7 @@ responses:
   .
   utter_<YOUR_NEW_UTTERANCE >:
   - text: "YOUR NEW RESPONSE"
-  
+
 ```
 
 In addition, you will add your intent names under the `intents` section of the domain file.
@@ -135,14 +213,46 @@ intents:
   - thank_you
 ###################
   - phd_info
-  - msc_info 
+  - msc_info
   - **YOU_WILL_APPEND_YOUR_INTENT(S)**
 ```
 
-## How to train the bot
+## How to Create a Trained Model
 
 Once you finish adding the intents and the strories, you will be able to integrate the new additions/edits to your bot by re-training the bot.
-Use below command to re-train the model;
 
-`rasa train`
+Use below command to re-train the model:
 
+```bash
+rasa train
+```
+
+---
+
+## Running Haystack Service
+
+1. Execute the `run.sh` script to create elasticsearch document store and initialize question-answer service (requires docker)
+
+    ```bash
+    bash ./run.sh
+    ```
+
+    This will create a new docker container called `elasticsearch` where all of the documents that can be queried will be stored. If this docker container ever stops you can either restart it from within docker dashboard or delete and recreate the container.
+
+    This script also launches the REST API used for querying the Haystack service.
+
+2. To access the Haystack API documentation, go to `http://127.0.0.1:8000/docs` in your browser. You should see the below image:
+
+    ![Haystack api swagger documentation](haystack-api.png)
+
+## Running API Tests
+
+- To test that the API is functioning properly run the following:
+
+    ```bash
+    pytest api_tests/tests.py
+    ```
+
+---
+
+[Back to Top](https://github.com/kmcleste/student-assist/tree/dev#ask-cci-bot)

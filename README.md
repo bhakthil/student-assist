@@ -62,7 +62,7 @@
     python3 -m pip install uvicorn, fastapi, pytest
     ```
 
-NOTE: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
+**NOTE**: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
 
 ---
 

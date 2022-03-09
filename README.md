@@ -252,3 +252,7 @@ rasa train
     ```bash
     pytest api_tests/tests.py
     ```
+
+---
+
+[Back to Top](https://github.com/kmcleste/student-assist/tree/dev#ask-cci-bot)

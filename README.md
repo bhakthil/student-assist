@@ -1,32 +1,66 @@
-# AskCCI Bot
-This repo contains rasa bot project AskCCI StudentAssist Bot that was developed as part of the course ITIS-6112-8112.
+# Ask-CCI Bot
 
-Design documentation is available at ['Design Document Link'](https://docs.google.com/document/d/1saYj5444O-YRcWeuIh9C38ucAxf4pyq5ainBT8tfWe4/edit?usp=sharing)
+## Project Setup
 
-# Project Setup
-- clone this project
-- change the directory to student-assist
+1. Clone this project to your local system via:
 
+    ```bash
+    git clone https://github.com/bhakthil/student-assist.git
+    ```
 
-- Create a new virtual environment by choosing a Python interpreter and making a ./venv directory to hold it:
+2. Change to the new directory:
 
-  `python3 -m venv ./venv`
+    ```bash
+    cd student-assist
+    ```
 
-- Activate the virtual environment:
+3. Create a new virtual environment:
 
-  `source ./venv/bin/activate`
+    ```bash
+    python3 -m venv ./venv
+    ```
 
-- Install Rasa Open Source using pip (requires Python 3.6, 3.7, or 3.8).
+4. Activate the virtual environment
 
-  `pip3 install -U --user pip`
+    ```bash
+    source ./venv/bin/activate
+    ```
 
-  `pip3 install rasa`
+## Installing Dependencies
 
-- Clone Haystack repo to local system
-- Change directory to haystack
-- Install dependencies using pip
+1. Install Rasa Open Source using pip (requires Python 3.6 or higher)
 
-  `pip3 install -e .`
+    ```bash
+    python3 -m pip install -U --user pip
+
+    python3 -m pip install rasa
+    ```
+
+2. Install Haystack from source
+   1. Change to the root directory where you store projects, make sure this is not **inside** of a project folder
+   2. Clone the [Haystack repo](https://github.com/deepset-ai/haystack)
+
+      ```bash
+      git clone https://github.com/deepset-ai/haystack.git
+      ```
+
+   3. Change to the new directory
+
+      ```bash
+      cd haystack
+      ```
+
+   4. Install `haystack` using pip:
+
+      ```bash
+      python3 -m pip install -e .
+      ```
+
+3. Install additional requirements using pip:
+
+    ```bash
+    python3 -m pip install uvicorn, fastapi, pytest
+    ```
 
 NOTE:
 

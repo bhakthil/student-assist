@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/kmclester/Documents/fastapi/tests/mlruns/0/80e5ab43415d4e60a088b29c37ba7a62/artifacts
+end_time: 1646841669703
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: 80e5ab43415d4e60a088b29c37ba7a62
+run_uuid: 80e5ab43415d4e60a088b29c37ba7a62
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1646841667919
+status: 3
+tags: []
+user_id: kmclester

@@ -9,18 +9,24 @@ Design documentation is available at ['Design Document Link'](https://docs.googl
 
 
 - Create a new virtual environment by choosing a Python interpreter and making a ./venv directory to hold it:
-  
+
   `python3 -m venv ./venv`
 
 - Activate the virtual environment:
-  
+
   `source ./venv/bin/activate`
 
 - Install Rasa Open Source using pip (requires Python 3.6, 3.7, or 3.8).
-  
+
   `pip3 install -U --user pip`
-  
+
   `pip3 install rasa`
+
+- Clone Haystack repo to local system
+- Change directory to haystack
+- Install dependencies using pip
+
+  `pip3 install -e .`
 
 NOTE:
 
@@ -54,7 +60,7 @@ There are few places that needs to be changed for a new intent to be added to th
 
 ### ./data/nlu.yml
 
-Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent. 
+Please add at least ten sample utterances for each of the intent you are responsible for. For an example, below markup is used to define `thank_you` intent.
 
   ```yml
   - intent: thank_you
@@ -62,7 +68,7 @@ Please add at least ten sample utterances for each of the intent you are respons
     - Thanks
     - Thank You
     - thanks
-    - thanks a lot 
+    - thanks a lot
     - thank you so much
   ```
 
@@ -118,7 +124,7 @@ responses:
   .
   utter_<YOUR_NEW_UTTERANCE >:
   - text: "YOUR NEW RESPONSE"
-  
+
 ```
 
 In addition, you will add your intent names under the `intents` section of the domain file.
@@ -135,7 +141,7 @@ intents:
   - thank_you
 ###################
   - phd_info
-  - msc_info 
+  - msc_info
   - **YOU_WILL_APPEND_YOUR_INTENT(S)**
 ```
 
@@ -145,4 +151,3 @@ Once you finish adding the intents and the strories, you will be able to integra
 Use below command to re-train the model;
 
 `rasa train`
-

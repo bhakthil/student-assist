@@ -55,16 +55,6 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
     pip install -r requirements.txt
     ```
 
-## One-line operation
-
-1. To launch all services from one script, run the following:
-
-    ```bash
-    . ./run.sh
-    ```
-
-  To run each part of the system indiviually, use the following set(s) of instructions
-
 ---
 
 ## How to Train The Chatbot
@@ -160,7 +150,7 @@ intents:
   - **YOU_WILL_APPEND_YOUR_INTENT(S)**
 ```
 
-## How to Create a Trained Model
+#### Training the Model
 
 Once you finish adding the intents and the strories, you will be able to integrate the new additions/edits to your bot by re-training the bot.
 
@@ -171,6 +161,19 @@ rasa train
 ```
 ---
 ## How to Run The Chatbot
+
+
+### One-line operation
+
+1. To launch all services from one script, run the following:
+
+    ```bash
+    . ./run.sh
+    ```
+
+  To run each part of the system indiviually, use the following set(s) of instructions
+
+### Starting separate services at a time
 
 1. First, you must start the Rasa action server:
   
@@ -211,9 +214,7 @@ You may start communicating with the bot by clicking on the on the bot icon.
 
 ![chat](chat-window.png)
 
----
-
-## Running Haystack Service
+### Running Haystack Service
 
 1. Start the elasticsearch document store and initialize question-answer service (requires docker)
 
@@ -230,7 +231,7 @@ You may start communicating with the bot by clicking on the on the bot icon.
 
     ![Haystack api swagger documentation](haystack-api.png)
 
-## Running API Tests
+### Running API Tests
 
 - To test that the API is functioning properly run the following:
 

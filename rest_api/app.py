@@ -13,8 +13,6 @@ from haystack.pipelines import FAQPipeline
 
 app = FastAPI(title="Ask-CCI Haystack API")
 
-haystack_vs = haystack.__version__
-
 document_store = ElasticsearchDocumentStore(
     host="localhost",
     username="",
@@ -48,7 +46,7 @@ def haystack_version() -> dict:
     """
     Returns the current version of Haystack used in the QA System
     """
-    return {"version": haystack_vs}
+    return {"version": haystack.__version__}
 
 class Query(BaseModel):
     query: str
@@ -57,8 +55,8 @@ class Query(BaseModel):
     @validator("query")
     def validate_query_length(cls, value):
         # Validation check to make sure user does not enter a single keyword as input 
-        if len(value) <= 25:
-            raise ValueError(f"Query expected to have length >= 25, recieved {len(value)}")
+        if len(value) <= 5:
+            raise ValueError(f"Query expected to have length >= 5, recieved {len(value)}")
         return value
 
     @validator("num_results")

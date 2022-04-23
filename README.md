@@ -4,16 +4,16 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
 
 ## Table of Contents
 
-- [Project Setup](https://github.com/kmcleste/student-assist/tree/dev#project-setup)
-- [Installaing Dependencies](https://github.com/kmcleste/student-assist/tree/dev#installing-dependencies)
-- [How to Run The Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-run-the-chatbot)
-- [How to Train the Chatbot](https://github.com/kmcleste/student-assist/tree/dev#how-to-train-the-chatbot)
-  - [NLU](https://github.com/kmcleste/student-assist/tree/dev#datanluyml)
-  - [Stories](https://github.com/kmcleste/student-assist/tree/dev#datastoriesyml)
-  - [Domain](https://github.com/kmcleste/student-assist/tree/dev#datadomainyml)
-- [How to Create a Trained Model](https://github.com/kmcleste/student-assist/tree/dev#how-to-create-a-trained-model)
-- [Running Haystack Service](https://github.com/kmcleste/student-assist/tree/dev#running-haystack-service)
-- [Running API Tests](https://github.com/kmcleste/student-assist/tree/dev#running-api-tests)
+- [Project Setup](https://github.com/bhakthil/student-assist#project-setup)
+- [Installaing Dependencies](https://github.com/bhakthil/student-assist#installing-dependencies)
+- [How to Run The Chatbot](https://github.com/bhakthil/student-assist#how-to-run-the-chatbot)
+- [How to Train the Chatbot](https://github.com/bhakthil/student-assist#how-to-train-the-chatbot)
+  - [NLU](https://github.com/bhakthil/student-assist#datanluyml)
+  - [Stories](https://github.com/bhakthil/student-assist#datastoriesyml)
+  - [Domain](https://github.com/bhakthil/student-assist#datadomainyml)
+- [How to Create a Trained Model](https://github.com/bhakthil/student-assist#how-to-create-a-trained-model)
+- [Running Haystack Service](https://github.com/bhakthil/student-assist#running-haystack-service)
+- [Running API Tests](https://github.com/bhakthil/student-assist#running-api-tests)
 
 ## Project Setup
 
@@ -32,52 +32,38 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
 3. Create a new virtual environment:
 
     ```bash
-    python3 -m venv ./venv
+    python3 -m venv .venv
     ```
 
 4. Activate the virtual environment
 
     ```bash
-    source ./venv/bin/activate
+    source .venv/bin/activate
     ```
 
 ## Installing Dependencies
 
-1. Install Rasa Open Source using pip (requires Python 3.6 or higher)
+1. Update pip to the latest version
+
+   ```bash
+   pip install -U pip
+   ```
+
+2. Install `requirements.txt`:
 
     ```bash
-    python3 -m pip install -U --user pip
-
-    python3 -m pip install rasa
+    pip install -r requirements.txt
     ```
 
-2. Install Haystack from source
-   1. Change to the root directory where you store projects, make sure this is not **inside** of a project folder
-   2. Clone the [Haystack repo](https://github.com/deepset-ai/haystack)
+## One-line operation
 
-      ```bash
-      git clone https://github.com/deepset-ai/haystack.git
-      ```
-
-   3. Change to the new directory
-
-      ```bash
-      cd haystack
-      ```
-
-   4. Install `haystack` using pip:
-
-      ```bash
-      python3 -m pip install -e .
-      ```
-
-3. Install additional requirements using pip:
+1. To launch all services from one script, run the following:
 
     ```bash
-    python3 -m pip install uvicorn, fastapi, pytest, emoji
+    . ./run.sh
     ```
 
-**NOTE**: Alternatively, you can run `python3 -m pip install -r requirements.txt` however this may not correctly install Haystack
+  To run each part of the system indiviually, use the following set(s) of instructions
 
 ---
 
@@ -231,10 +217,11 @@ rasa train
 
 ## Running Haystack Service
 
-1. Execute the `run.sh` script to create elasticsearch document store and initialize question-answer service (requires docker)
+1. Start the elasticsearch document store and initialize question-answer service (requires docker)
 
     ```bash
-    bash ./run.sh
+    python3 ./haystack/init_doc_store.py
+    uvicorn app:app --reload --app-dir rest_api/
     ```
 
     This will create a new docker container called `elasticsearch` where all of the documents that can be queried will be stored. If this docker container ever stops you can either restart it from within docker dashboard or delete and recreate the container.
@@ -255,4 +242,4 @@ rasa train
 
 ---
 
-[Back to Top](https://github.com/kmcleste/student-assist/tree/dev#ask-cci-bot)
+[Back to Top](https://github.com/bhakthil/student-assist#ask-cci-bot)

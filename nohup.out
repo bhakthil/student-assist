@@ -1,39 +1,4 @@
+nohup: rasa: No such file or directory
+nohup: rasa: No such file or directory
 INFO:     Will watch for changes in these directories: ['/Users/kmclester/Documents/dsba-6345/student-assist']
-INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [31171] using statreload
-INFO - haystack.modeling.model.optimization -  apex not found, won't use it. See https://nvidia.github.io/apex/
-INFO - haystack.modeling.utils -  Using devices: CPU
-INFO - haystack.modeling.utils -  Number of GPUs: 0
-INFO - haystack.nodes.retriever.dense -  Init retriever using embeddings of model sentence-transformers/all-MiniLM-L6-v2
-INFO - haystack.modeling.utils -  Using devices: CPU
-INFO - haystack.modeling.utils -  Number of GPUs: 0
-INFO - haystack.modeling.model.language_model -  LOADING MODEL
-INFO - haystack.modeling.model.language_model -  =============
-INFO - haystack.modeling.model.language_model -  Could not find sentence-transformers/all-MiniLM-L6-v2 locally.
-INFO - haystack.modeling.model.language_model -  Looking on Transformers Model Hub (in local cache and online)...
-INFO - haystack.modeling.model.language_model -  Loaded sentence-transformers/all-MiniLM-L6-v2
-INFO - haystack.modeling.data_handler.processor -  Initialized processor without tasks. Supply `metric` and `label_list` to the constructor for using the default task or add a custom task later via processor.add_task()
-INFO - haystack.modeling.logger -  ML Logging is turned off. No parameters, metrics or artifacts will be logged to MLFlow.
-INFO - haystack.modeling.utils -  Using devices: CPU
-INFO - haystack.modeling.utils -  Number of GPUs: 0
-WARNING - haystack.nodes.retriever._embedding_encoder -  You seem to be using a Sentence Transformer with the dot_product function. We recommend using cosine instead. This can be set when initializing the DocumentStore
-INFO:     Started server process [31186]
-INFO - uvicorn.error -  Started server process [31186]
-INFO:     Waiting for application startup.
-INFO - uvicorn.error -  Waiting for application startup.
-INFO:     Application startup complete.
-INFO - uvicorn.error -  Application startup complete.
-INFO:     127.0.0.1:60004 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60004 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60004 - "POST /haystack-query/ HTTP/1.1" 422 Unprocessable Entity
-Inferencing Samples:   0%|          | 0/1 [00:00<?, ? Batches/s]Inferencing Samples: 100%|██████████| 1/1 [00:00<00:00,  3.87 Batches/s]Inferencing Samples: 100%|██████████| 1/1 [00:00<00:00,  3.87 Batches/s]INFO:     127.0.0.1:60005 - "POST /haystack-query/ HTTP/1.1" 200 OK
-
-INFO:     Shutting down
-INFO - uvicorn.error -  Shutting down
-INFO:     Waiting for application shutdown.
-INFO - uvicorn.error -  Waiting for application shutdown.
-INFO:     Application shutdown complete.
-INFO - uvicorn.error -  Application shutdown complete.
-INFO:     Finished server process [31186]
-INFO - uvicorn.error -  Finished server process [31186]
-INFO:     Stopping reloader process [31171]
+ERROR:    [Errno 48] Address already in use

@@ -19,12 +19,12 @@ def test_root_endpoint():
 def test_haystack_version():
     resp = client.get("/haystack-version/")
     assert resp.status_code == 200
-    assert resp.json() == {"version": "1.2.0"}
+    assert resp.json() == {"version": "1.3.0"}
 
 def test_query_length():
     json_blob = {
-        "query": "invalid length",
-        "num_results": 3,
+        "query": "uncc",
+        "num_results": 1,
     }
     resp = client.post("/haystack-query/", json=json_blob)
     assert resp.status_code != 200

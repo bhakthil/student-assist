@@ -3,3 +3,7 @@
 .venv
 mlruns
 .rasa
+.DS_Store
+.pytest*
+*pycache*
+nohup*

@@ -67,49 +67,6 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
 
 ---
 
-## How to Run The Chatbot
-
-1. First, you must start the Rasa action server:
-  
-   ```bash
-   rasa run actions
-   ```
-
-   - If the action server is running, you should be able to see the below message:
-
-        ```bash
-      (.venv) ➜  student-assist git:(dev) ✗ rasa run actions
-      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
-      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_info_retrieval'.
-      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_default_ask_affirmation'.
-      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
-      ```
-
-2. In a separate terminal, you can start the chatbot server by executing:
-  
-    ```bash
-    rasa run -m models --enable-api --cors "*"
-    ```
-
-   - If the server is up and running, you should be able to see the below message:
-
-     ```bash
-     (.venv) ➜  student-assist git:(dev) ✗ rasa run -m models --enable-api --cors "*"
-     2022-03-09 14:34:53 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
-     2022-03-09 14:34:54 INFO     rasa.core.processor  - Loading model models/20220309-143217-broad-valid.tar.gz...
-     2022-03-09 14:35:31 INFO     root  - Rasa server is up and running.
-     ```
-
-When you open the [AskCCI.html](https://github.com/bhakthil/student-assist/blob/main/Chatbot-Widget/AskCCI.html) file, you will notice chat icon in the bottom-right corner
-
-![bot icon](bot-icon.png)
-
-You may start communicating with the bot by clicking on the on the bot icon.
-
-![chat](chat-window.png)
-
----
-
 ## How to Train The Chatbot
 
 In order for the bot to understand different intents, it needs to be trained with sample utterances for each new intent.
@@ -212,6 +169,47 @@ Use below command to re-train the model:
 ```bash
 rasa train
 ```
+---
+## How to Run The Chatbot
+
+1. First, you must start the Rasa action server:
+  
+   ```bash
+   rasa run actions
+   ```
+
+   - If the action server is running, you should be able to see the below message:
+
+        ```bash
+      (.venv) ➜  student-assist git:(dev) ✗ rasa run actions
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Starting action endpoint server...
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_info_retrieval'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.executor  - Registered function for 'action_default_ask_affirmation'.
+      2022-03-09 14:41:23 INFO     rasa_sdk.endpoint  - Action endpoint is up and running on http://0.0.0.0:5055
+      ```
+
+2. In a separate terminal, you can start the chatbot server by executing:
+  
+    ```bash
+    rasa run -m models --enable-api --cors "*"
+    ```
+
+   - If the server is up and running, you should be able to see the below message:
+
+     ```bash
+     (.venv) ➜  student-assist git:(dev) ✗ rasa run -m models --enable-api --cors "*"
+     2022-03-09 14:34:53 INFO     root  - Starting Rasa server on http://0.0.0.0:5005
+     2022-03-09 14:34:54 INFO     rasa.core.processor  - Loading model models/20220309-143217-broad-valid.tar.gz...
+     2022-03-09 14:35:31 INFO     root  - Rasa server is up and running.
+     ```
+
+When you open the [AskCCI.html](https://github.com/bhakthil/student-assist/blob/main/Chatbot-Widget/AskCCI.html) file, you will notice chat icon in the bottom-right corner
+
+![bot icon](bot-icon.png)
+
+You may start communicating with the bot by clicking on the on the bot icon.
+
+![chat](chat-window.png)
 
 ---
 

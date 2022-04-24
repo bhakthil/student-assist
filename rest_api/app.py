@@ -78,8 +78,11 @@ def haystack_query(query: Query) -> dict:
 
     # Runs a query on document store and returns the top-k answers
     prediction = pipe.run(query=question, params={"Retriever":{"top_k":num_results}})
-    resp = {}
+    
     # Answers objects must be converted to a dictonary to display correctly
+    resp = {}
     for idx, answer in enumerate(prediction['answers']):
         resp[idx] = answer.to_dict()
+    
+    #resp = [(ans.meta['answer'], ans.meta['link']) for ans in prediction['answers']]
     return resp

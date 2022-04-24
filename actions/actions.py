@@ -12,19 +12,49 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from emoji import emojize
+import requests
 
-
+## Class to call Haystack
 class ActionHaystackSearch(Action):
 
     def name(self) -> Text:
         return "action_info_retrieval"
 
+    def locate_last_utterance(self, events):
+        # the tracker got the information about recent events 
+        latest_actions = []
+        for event in events:
+            # if there is further data bein parsed
+            print(event)
+            
+            if event['event'] == 'user' and event['text'] and (not event['text'].startswith('/')):
+                #print(event)
+                latest_actions.append(event['parse_data']['text'])
+        return latest_actions.pop()
+         
+                    
+                
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-# call hs api get the response and return it in dispatcher
-        dispatcher.utter_message(text="Calling haystack and returning search results....")
-
+        # Get the last user utterance
+        last_utter = self.locate_last_utterance(tracker.events)
+        print('----------------',last_utter,'---------------')
+        # call hs api get the response and return it in dispatcher
+        url = "http://localhost:8000/haystack-query/"
+        _data = {"query": last_utter, "num_results": "2"}
+        print(url, _data)
+        headers = {
+            'Content-Type': 'application/json'
+        }
+        try:
+            response = requests.request("POST", url, headers=headers, json=_data).json()
+            links = [answer['meta']['link'] for idx, answer in response.items()]
+            print(links)
+            dispatcher.utter_message(response="utter_info_retrieval", link1=links[0],link2=links[1])
+        except Exception as e:
+            print(str(e))
+            dispatcher.utter_message(text='Something went wrong with Haystack search')
         return []
 
 class ActionDefaultAskAffirmation(Action):

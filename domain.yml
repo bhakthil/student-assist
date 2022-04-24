@@ -102,7 +102,7 @@ responses:
   - text: "Thank you very much for using AskCCI Student Assist"
 
   utter_info_retrieval:
-  - text: "Calling haystack........." 
+  - text: "We found few useful links to your query...\n<a href='{link1}'>Link 1</a>\n<a href='{link2}'>Link 2</a>\nDid that help you?"
 
 actions:
   - action_default_ask_affirmation

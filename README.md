@@ -108,7 +108,7 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   - action: ...
 ```
 
-## ./data/domain.yml
+## ./domain.yml
 
 Domain file is where you define the responses for each intent. You will add responses for each of your intent under `responses` section.
 

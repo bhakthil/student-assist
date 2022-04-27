@@ -1,6 +1,6 @@
 farm-haystack==1.2.0
 rasa==3.1.0
-rasa-sdk
+rasa-sdk==3.1.1
 docker==5.0.3
 uvicorn==0.17.6
 fastapi==0.75.2

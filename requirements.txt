@@ -1,5 +1,5 @@
-farm-haystack
-rasa
+farm-haystack==1.2.0
+rasa==3.1.0
 rasa-sdk
 docker==5.0.3
 uvicorn==0.17.6

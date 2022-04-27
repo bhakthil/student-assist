@@ -159,6 +159,16 @@ Use below command to re-train the model:
 ```bash
 rasa train
 ```
+
+#### Testing the Model
+
+Once you finish training your bot, you can perform a quick test by running the bot in interactive mode.
+
+Use below command to start the bot in ineractive mode:
+
+```bash
+rasa shell --debug
+```
 ---
 ## How to Run The Chatbot
 

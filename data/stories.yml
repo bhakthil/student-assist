@@ -224,3 +224,20 @@ stories:
   - intent: thank_you
   - action: utter_thanks
 
+### ---------- Demo ---------------###
+- story: account inquiry happy path
+  steps:
+  - intent: account_inquiry
+  - action: utter_account_inquiry
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: utter_continue
+
+- story: caccount inquiry unhappy path
+  steps:
+  - intent: account_inquiry
+  - action: utter_account_inquiry
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_helpdesk

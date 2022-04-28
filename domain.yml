@@ -23,6 +23,7 @@ intents:
   - info_retrieval
   - deny_info_retrieval
   - helpdesk
+  - account_inquiry
 
 entities:
   - degree
@@ -104,6 +105,10 @@ responses:
   utter_info_retrieval:
   - text: "We found few useful links to your query...\n<a href='{link1}'>Link 1</a>\n<a href='{link2}'>Link 2</a>\nDid that help you?"
 
+### ---------- Demo ---------------###
+  utter_account_inquiry:
+  - text: "You can get more information about your account. Please see <a href='https://webauth.uncc.edu/idp/profile/SAML2/Unsolicited/SSO?providerId=touchnet-prod-tbp&shire=https://ecom.uncc.edu/C21561_tsa/web/caslogin.jsp?REDIRECT_PARAMETER=HOME'>Accounts Portal</a>"
+  
 actions:
   - action_default_ask_affirmation
   - action_info_retrieval

@@ -38,10 +38,10 @@ class ActionHaystackSearch(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         # Get the last user utterance
-        last_utter = self.locate_last_utterance(tracker.events)
+        last_utter = self.locate_last_utterance(tracker.events).replace('?','').replace('*','')
         print('----------------',last_utter,'---------------')
         # call hs api get the response and return it in dispatcher
-        url = "http://localhost:8000/haystack-query/"
+        url = "http://127.0.0.1:8000/haystack-query/"
         _data = {"query": last_utter, "num_results": "2"}
         print(url, _data)
         headers = {

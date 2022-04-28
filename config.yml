@@ -12,6 +12,13 @@ pipeline:
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
+  - name: LanguageModelFeaturizer
+    # Name of the language model to use
+    model_name: "bert"
+    # Pre-Trained weights to be loaded
+    model_weights: "rasa/LaBSE"
+
+
   - name: CountVectorsFeaturizer
   - name: CountVectorsFeaturizer
     analyzer: "char_wb"
@@ -19,6 +26,8 @@ pipeline:
     max_ngram: 4
   - name: DIETClassifier
     epochs: 100
+    constrain_similarities: true
+    model_confidence: softmax
   - name: FallbackClassifier
     threshold: 0.75
   - name: EntitySynonymMapper

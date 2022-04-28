@@ -168,7 +168,7 @@ nlu:
     - How can I get internships information
     - How can I get internships information
     - fellowships internship opportunities information
-    - fellowships opportunities information
+    - fellowships opportunities informationwhat is my 
     - internship opportunities information
     - fellowships and internships home page
     - fellowships home page
@@ -252,3 +252,19 @@ nlu:
 
 - intent: deny_info_retrieval
   examples: |
+
+
+### ---------- Demo ---------------###
+- intent: account_inquiry
+  examples: |
+    - What is my student account balance
+    - How much do I have to pay
+    - outstanding balance
+    - how much I owe
+    - my balance
+    - student account
+    - payment inquiry
+    - what is my balance?
+    - how to get account information
+    - account information
+    - account details

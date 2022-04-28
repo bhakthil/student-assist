@@ -169,6 +169,8 @@ Use below command to start the bot in ineractive mode:
 ```bash
 rasa shell --debug
 ```
+![image](https://user-images.githubusercontent.com/12928110/165818077-81a72ed8-23ef-445c-8f07-6649b76fd03f.png)
+
 ---
 ## How to Run The Chatbot
 

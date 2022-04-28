@@ -108,7 +108,7 @@ Each intent should have at least 2 paths; **happy path** **and unhappy path**. S
   - action: ...
 ```
 
-## ./data/domain.yml
+## ./domain.yml
 
 Domain file is where you define the responses for each intent. You will add responses for each of your intent under `responses` section.
 
@@ -158,6 +158,16 @@ Use below command to re-train the model:
 
 ```bash
 rasa train
+```
+
+#### Testing the Model
+
+Once you finish training your bot, you can perform a quick test by running the bot in interactive mode.
+
+Use below command to start the bot in ineractive mode:
+
+```bash
+rasa shell --debug
 ```
 ---
 ## How to Run The Chatbot

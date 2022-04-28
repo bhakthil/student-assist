@@ -54,6 +54,7 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
     ```bash
     pip install -r requirements.txt
     ```
+**NOTE:** If you encounter any errors please run the command again.
 
 ---
 

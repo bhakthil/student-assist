@@ -54,7 +54,10 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
     ```bash
     pip install -r requirements.txt
     ```
-**NOTE:** If you encounter any errors please run the command again.
+    **NOTE:** If you encounter any errors please run the command again.
+
+3. Install Docker
+    - Please check Docker site for most recent installation instructions: https://docs.docker.com/desktop/
 
 ---
 

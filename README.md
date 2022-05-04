@@ -5,7 +5,7 @@ This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was
 ## Table of Contents
 
 - [Project Setup](https://github.com/bhakthil/student-assist#project-setup)
-- [Installaing Dependencies](https://github.com/bhakthil/student-assist#installing-dependencies)
+- [Installing Dependencies](https://github.com/bhakthil/student-assist#installing-dependencies)
 - [How to Run The Chatbot](https://github.com/bhakthil/student-assist#how-to-run-the-chatbot)
 - [How to Train the Chatbot](https://github.com/bhakthil/student-assist#how-to-train-the-chatbot)
   - [NLU](https://github.com/bhakthil/student-assist#datanluyml)

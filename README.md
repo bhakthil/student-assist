@@ -1,6 +1,6 @@
 # Ask-CCI Bot
 
-This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was originally developed as part of the course ITIS-6112-8112 and has been further expanded for course DSBA-6345.
+This repo contains the rasa bot project: **Ask-CCI Student Assist Bot** that was originally developed as part of the course ITIS-6112-8112 and has been further expanded for course DSBA-6345. This project was further modfied for the demo at ATL Dev Con 2022
 
 ## Table of Contents
 
